@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vista"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context=".MainActivity"
+   >
+
+    <TextView
+        android:id="@+id/texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="TEXTO"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="346dp"
+        android:layout_height="197dp"
+        android:layout_marginTop="48dp"
+        android:background="@android:color/transparent"
+        android:onClick="setGroupUno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/fondoNegro"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:onClick="onRadioButtonClicked"
+            android:text="Fondo Negro" />
+
+        <RadioButton
+            android:id="@+id/fondoVerde"
+            android:layout_width="match_parent"
+            android:onClick="onRadioButtonClicked"
+            android:layout_height="66dp"
+            android:text="fondo Verde" />
+
+        <RadioButton
+            android:id="@+id/fondoRojjo"
+            android:layout_width="match_parent"
+            android:onClick="onRadioButtonClicked"
+            android:layout_height="66dp"
+            android:text="Fondo Rojo" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="347dp"
+        android:layout_height="198dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup">
+
+        <RadioButton
+            android:id="@+id/textoBlanco"
+            android:onClick="onRadioButtonClicked2"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:text="Texto Blanco" />
+
+        <RadioButton
+            android:id="@+id/textoAmarillo"
+            android:layout_width="match_parent"
+            android:onClick="onRadioButtonClicked2"
+            android:layout_height="66dp"
+            android:text="Texto Amarillo" />
+
+        <RadioButton
+            android:id="@+id/textoAzul"
+            android:onClick="onRadioButtonClicked2"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:text="Texto Azul" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:checked="true"
+        android:layout_width="125dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="28dp"
+        android:text="Mostrar texto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
